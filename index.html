@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" id="html" class="hola">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="nuevo.css"/>
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta
+    name="description"
+    content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+</head>
+<body id="principal">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <a href="https://wa.me/51943776886" class="btn-flotante" target="_blank">
+        <img src="https://1000marcas.net/wp-content/uploads/2019/11/WhatsApp-logo.png" alt="WhatsApp">
+    </a>
+    <div id="root" class="theme-light">
+        <section class="menu">
+            <div class="toogle" id="toogledos"></div>
+            <ul>
+                <li><a href="#inicio" onclick="toggledos()" rel="noopener noreferrer">Inicio</a></li>
+                <li><a href="#teofrezco"  onclick="toggledos()" rel="noopener noreferrer">Que ofrezco</a></li>
+                <li><a href="#"  onclick="toggledos()" rel="noopener noreferrer">Aula</a></li>
+                <li><a href="#"  onclick="toggledos()" rel="noopener noreferrer">Nuestros Productos</a></li>
+            </ul>
+        </section>
+        <header id="header">
+            <a href="https://github.com/pierorolando1" class="logo" target="blank"><img src="https://frankrolando.com/wp-content/uploads/sites/107/2020/08/FRANKROLANDO-1200-X-600.png" alt="frankrolando" style="    max-height: 54%; width: 100%;
+                width: 145px;"></a>
+            
+            <div class="cambiador">
+                    <label  class="switch" id="yanosequeponer">
+                        <input type="checkbox"  id="slider" />
+                        <span class="slider round" id="switch"></span>            
+                    </label>
+                </div>
+                
+            <div id="toogle" class="toogle"></div>
+            <ul>
+                <li><a href="#inicio" rel="noopener noreferrer">Inicio</a></li>
+                <li><a href="#teofrezco" rel="noopener noreferrer">Que ofrezco</a></li>
+                <li><a href="#" rel="noopener noreferrer">Aula</a></li>
+                <li><a href="#" rel="noopener noreferrer">Nuestros Productos</a></li>
+            </ul>
+        </header>
+
+        <section class="banner" id="inicio">
+            <div class="textBx" id="unico">
+                <h2>Impulsa<br/><span>Tu rendimiento</span></h2>
+                <h3>Tu aliado para cooperar, innovar y articular tu negocio</h3>
+                <a href="#contactame" class="btn">Contactame</a>
+            </div>
+        </section>
+
+        <section class="about" id="perico">
+            <div class="heading">
+                <h2 id="mariconsito">Mayor alcance para tu negocio</h2>
+            </div>
+            <div class="content">
+                <div class="contentBx w50">
+                    <h3>Como funciona?</h3>
+                    <p>Desarrollo aplicaciones móviles para maximizar el impacto sobre tus usuarios, captar nuevos clientes y fidelizar a los actuales, lo que permitirá conecta con tus usuarios estén donde estén.
+                        <br/>
+                        <br/>
+                </p>
+                </div>
+                <div class="w50" id="video">
+                    <iframe src="https://player.vimeo.com/video/355518502" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="services sectiondark" id="teofrezco">
+            <div class="fotaso">
+                <div class="heading">
+                    <h2>Que te ofrezco?</h2>
+                    <p>Como puedo mejorar tu negocio?</p>
+                </div>
+                <div class="content">
+                    <div class="servicesBx">
+                        <img src='https://www.flaticon.es/svg/static/icons/svg/921/921591.svg' class="icon" alt="imagen"/>
+                        <h2>Desarrollar tu negocio</h2>
+                        <p>Te ayudaré a encontrar nuevos mercados con trazabilidad virtual (Market Place, venta y canales de pago)</p>
+                    </div>
+                    <div class="servicesBx">
+                        <img src='https://www.flaticon.es/svg/static/icons/svg/2072/2072726.svg' class="icon" alt="imagen"/>
+                        <h2>Mejorar tu presencia online</h2>
+                        <p>A través de plataformas cooperativas de triple impacto (Social, Económica y Ambiental) con tecnología y WEB, APP, PWA, ERP, Inteligencia Artificial y mucho más.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work">
+            <div class="heading">
+                <h2>Que Conseguirán?</h2>
+            </div>
+            <div class="content">
+                <div class="comunicacion">
+                    <h3 class="textcontext">COMUNICACIÓN EFICAZ</h3>
+                    <p class="textcontext">¡Impactando a tus clientes en tiempo real!<br>
+                        A través de notificaciones Push con ofertas personalizados en función a la preferencia de tu usuario.</p>
+                    <br>
+                    <h3 class="textcontext">BUSINESS INTELLIGENCE</h3>
+                    <p class="textcontext">Gracias a la integración con Facebook, Twitter y analíticas que te permitirán aumentar el ROI de tu negocio.</p>
+                </div>
+                <div>
+                    <img src="https://frankrolando.com/wp-content/uploads/sites/107/2020/12/felicidad-1000-x-800.png" alt="felicidad png">
+                </div>
+            </div>
+        </section>
+
+        <section class="aula">
+            <h3 class="textcontext">Aula Virtual</h3>
+            <p class="textcontext">Aquí aprenderás la gestión y dirección del emprendimiento con proyectos de inversión <br>(Consultoria, Acompañamiento, Asesoría, Mentoría, Formulación, Factibilidad y Ejecución).</p>
+            <div>
+                <img src="https://frankrolando.com/wp-content/uploads/sites/107/2020/12/COOPERAR.png" alt="cooperar">
+            </div>
+        </section>
+
+
+        <section class="services sectiondark">
+            <div class="heading">
+                <h2>Nuestros productos</h2>
+                <p>Ofrecemos productos con propósito que son sembrados y cosechados por los mismos pobladores, permitiendo así generar puestos de trabajo.</p>
+            </div>
+            <div class="content">
+                <div class="servicesBx">
+                    <img src='https://frankrolando.com/wp-content/uploads/sites/107/2020/12/click-cafe-480x480.png' class="icon" alt="imagen"/>
+                    <h2>Todo Café</h2>
+                </div>
+                <div class="servicesBx">
+                    <img src='https://frankrolando.com/wp-content/uploads/sites/107/2020/12/tienda-virtual-CLICK-2-980x980.png' class="icon" alt="imagen"/>
+                    <h2>Todo Cacao</h2>
+                </div>
+                <div class="servicesBx alternative" style="padding-top: 8rem; padding-bottom: 8rem;">
+                    <a href="" class="btn holanda">Ver Tienda</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact" id="contactame">
+            <div class="heading">
+                <h2>Contactame</h2>
+            </div>
+            <div class="content">
+                <div class="contactInfo">
+                    <h3>Contact Info</h3>
+                    <div class="contactInfoBx">
+                        <div class="box">
+                            <div class="text">
+                                <p>jimmyrolando@gmail.com, <br/>Trujillo, Perú<br/>+51943776886</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBx">
+                    <ul>
+                        <a href="https://wa.me/51943776886" rel="noopener noreferrer"><li><i class="fa fa-whatsapp" aria-hidden="true"></i></li></a>
+                        <a href="https://www.linkedin.com/company/frankrolando/?viewAsMember=true" rel="noopener noreferrer"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                        <a href="https://www.youtube.com/channel/UCrMp9BJRSDJXKYkZ1wnBN2A?view_as=subscriber" rel="noopener noreferrer"><li><i class="fa fa-youtube-play" aria-hidden="true"></i></li></a>
+                        <a href="https://twitter.com/Jimmyrolandot" rel="noopener noreferrer"><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
+                        <a href="https://www.facebook.com/FrankRolando-Fintech-257188494314450/?view_public_for=257188494314450" rel="noopener noreferrer"><li><i class="fa fa-facebook-official" aria-hidden="true"></i></li></a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    window.addEventListener('scroll', function(){
+    header.classList.toggle('sticky', window.scrollY > 0);
+    });
+</script>
+<script>
+
+function toggle(){
+        var root = document.getElementById('root');
+        root.classList.toggle('theme-dark');
+}
+
+document.getElementById('slider').onclick  = function() {
+    toggle()
+}
+document.getElementById('yanosequeponer').onclick  = function() {
+    toggle()
+}
+function toggledos(){
+        var root = document.getElementById('root');
+        root.classList.toggle('active');
+}
+document.getElementById('toogle').onclick  = function() {
+    toggledos()
+}
+document.getElementById('toogledos').onclick  = function() {
+    toggledos()
+}
+</script>
+
+</html>
