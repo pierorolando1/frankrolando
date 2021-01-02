@@ -645,6 +645,9 @@ justify-content: center;
 }
 
 @media (max-width: 540px) {
+  .dos{
+        font-size: 0.8rem;
+  }
   .about{
     background-color: red;
   }
@@ -715,7 +718,7 @@ header img{
 }
 }
 	</style>
-    <title>React App</title>
+    <title>Inicio - Frank Rolando</title>
 </head>
 <body id="principal">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -728,12 +731,12 @@ header img{
             <ul>
                 <li><a href="#inicio" onclick="toggledos()" rel="noopener noreferrer">Inicio</a></li>
                 <li><a href="#teofrezco"  onclick="toggledos()" rel="noopener noreferrer">Que ofrezco</a></li>
-                <li><a href="#"  onclick="toggledos()" rel="noopener noreferrer">Aula</a></li>
-                <li><a href="#"  onclick="toggledos()" rel="noopener noreferrer">Nuestros Productos</a></li>
+                <li><a href="#aula"  onclick="toggledos()" rel="noopener noreferrer">Aula</a></li>
+                <li><a href="#productos"  onclick="toggledos()" rel="noopener noreferrer">Nuestros Productos</a></li>
             </ul>
         </section>
         <header id="header">
-            <a href="https://github.com/pierorolando1" class="logo" target="blank"><img src="https://frankrolando.com/wp-content/uploads/sites/107/2020/08/FRANKROLANDO-1200-X-600.png" alt="frankrolando" style="    max-height: 54%; width: 100%;
+            <a href="frankrolando.com" class="logo" target="blank"><img src="https://frankrolando.com/wp-content/uploads/sites/107/2020/08/FRANKROLANDO-1200-X-600.png" alt="frankrolando" style="    max-height: 54%; width: 100%;
                 width: 145px;"></a>
             
             <div class="cambiador">
@@ -747,8 +750,8 @@ header img{
             <ul>
                 <li><a href="#inicio" rel="noopener noreferrer">Inicio</a></li>
                 <li><a href="#teofrezco" rel="noopener noreferrer">Que ofrezco</a></li>
-                <li><a href="#" rel="noopener noreferrer">Aula</a></li>
-                <li><a href="#" rel="noopener noreferrer">Nuestros Productos</a></li>
+                <li><a href="#aula" rel="noopener noreferrer">Aula</a></li>
+                <li><a href="#productos" rel="noopener noreferrer">Nuestros Productos</a></li>
             </ul>
         </header>
 
@@ -757,6 +760,7 @@ header img{
                 <h2>Impulsa<br/><span>Tu rendimiento</span></h2>
                 <h3>Tu aliado para cooperar, innovar y articular tu negocio</h3>
                 <a href="#contactame" class="btn">Contactame</a>
+                <a href="https://frankrolando.olistshops.com/" class="btn dos">Visita nuestra tienda</a>
             </div>
         </section>
 
@@ -818,7 +822,7 @@ header img{
             </div>
         </section>
 
-        <section class="aula">
+        <section class="aula" id="aula">
             <h3 class="textcontext">Aula Virtual</h3>
             <p class="textcontext">Aquí aprenderás la gestión y dirección del emprendimiento con proyectos de inversión <br>(Consultoria, Acompañamiento, Asesoría, Mentoría, Formulación, Factibilidad y Ejecución).</p>
             <div>
@@ -827,7 +831,7 @@ header img{
         </section>
 
 
-        <section class="services sectiondark">
+        <section class="services sectiondark" id="productos">
             <div class="heading">
                 <h2>Nuestros productos</h2>
                 <p>Ofrecemos productos con propósito que son sembrados y cosechados por los mismos pobladores, permitiendo así generar puestos de trabajo.</p>
