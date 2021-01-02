@@ -134,7 +134,7 @@ section{
 .banner{
   position: relative;
   min-height: 100vh;
-  background: url(FINAL\ AL\ CUADRAD_1.gif);
+  background: url(https://raw.githubusercontent.com/pierorolando1/frankrolando/main/FINAL%20AL%20CUADRAD_1.gif);
   background-size: cover;
   background-position: right;
   display: flex;
@@ -328,7 +328,7 @@ header ul {
   color: white;
 }
 .theme-dark .banner{
-  background: url('FINAL\ AL\ CUADRAD.gif');
+  background: url('https://raw.githubusercontent.com/pierorolando1/frankrolando/main/FINAL%20AL%20CUADRAD_1.gif');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
