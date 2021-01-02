@@ -17,6 +17,704 @@
     user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.theme-light {
+  --color-titulo: #000000;
+  --color-text: #111111;
+  --color-back: #ffffff;
+  --color-back-secundario: #f1f1f1;
+  --shadow: #00000091;
+  --fondo-terceario: #dfe0e0cc;
+  --barrita1 : ;
+  --barrita2 : ;
+  --barrita3 : ;
+  --barrita4 : ;
+}
+.theme-dark {
+  --color-titulo: #ffffff;
+  --color-text: #ffffff;
+  --color-back: #111111;
+  --color-back-secundario: #222;
+  --shadow: #000000;
+  --fondo-terceario: #141618;
+  --barrita1 : #282D31;
+  --barrita2 :  #494c4f;
+  --barrita3 : #181a1cc2;
+  --barrita4 :  #2b3033c1;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  scale: 0.75;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: black url('https://i.ibb.co/FxzBYR9/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+section{
+  padding: 100px;
+}
+.banner{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://raw.githubusercontent.com/pierorolando1/frankrolando/main/FINAL%20AL%20CUADRAD_1.gif);
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.banner h2{
+  font-size: 3em;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+.banner h2 span{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.banner h3{
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: 500;
+}
+.btn{
+  position: relative;
+  background: #2195f390;
+  display: inline-block;
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.3s;
+  scroll-behavior: smooth;
+}
+.btn:hover{
+  background: #2195f3ec;
+  scale: 1.1;
+  transform: scale(1.09);
+}
+.btn:active{
+  transform: scale(1);
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  height: 100px;
+}
+header .logo{
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+header ul{
+  position: relative;
+  display: flex;
+}
+header ul li{
+  position: relative;
+  list-style: none;
+}
+header ul li a{
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.heading{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+.heading h2{
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-titulo);
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+.contentBx h3{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.w50{
+  min-width: 50%;
+}
+img{
+  max-width: 100%;
+}
+.contentBx{
+  padding-right: 30px;
+}
+header.sticky{
+  background: var(--color-back);
+  color: var(--color-text);
+  padding: 20px 100px;
+  opacity: 0.9;
+  height: 75px;
+}
+section.about {
+  background: #1B262C;
+  color: white;
+}
+.icon{
+  width: 128px;
+  height: 128px;
+}
+.sectiondark{
+  background: var(--color-back);
+  color: var(--color-text);
+}
+.services .content{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.services .content .servicesBx{
+  padding: 40px 20px;
+  background: var(--color-back-secundario);
+  color: var(--color-text);
+  max-width: 340px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 7px 7px 10px 2px var(--shadow);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.services .content .servicesBx:hover{
+  background-color: #2196f3;
+  box-shadow: 5px 5px 19px 1.5px var(--shadow);
+  transform: scale(1.03);
+
+}
+.services p{
+  color: var(--color-text);
+}
+.testimonial .content .testimonialBx h3 span {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+header ul {
+  text-align: center;
+  align-items: center;
+}
+#switch{
+  z-index: 1000000000000000000;
+}
+
+.sticky ul li a {
+  color: var(--color-titulo);
+}
+.sticky a.logo {
+  color: var(--color-titulo);
+}
+/*Hola perosona que este leyendo esto, la quiero mucho*/
+
+
+.theme-dark .services .content .servicesBx img::selection  { 
+  color: white;  background: #d3d3d3; 
+}
+.services .content .servicesBx h2{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.work{
+  background: var(--fondo-terceario);
+}
+#mariconsito{
+  color: white;
+}
+.theme-dark .banner{
+  background: url('https://raw.githubusercontent.com/pierorolando1/frankrolando/main/FINAL%20AL%20CUADRAD_1.gif');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.work .content{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1.5fr 1fr;
+}
+.work .content .workBx{
+  width: 50%;
+  padding: 20px;
+}
+.work .content .workBx img{
+  max-width: 100%;
+}
+.testimonial{
+  background: #222831;
+}
+.testimonial .content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.testimonial .content .testimonialBx{
+  max-width: calc(50% - 40px);
+  padding: 60px 40px;
+  background: #2196f3;
+}
+.testimonial .content .testimonialBx p{
+  color: #ffffff;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.testimonial .content .testimonialBx h3{
+  margin-top: 40px;
+  text-align: end;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1em;
+}
+.testimonial .content .testimonialBx h3 span{
+  font-size: 0.9rem;
+
+}
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+
+    background-color: #2b3033c1;
+  border-radius: 1rem;
+}
+body::-webkit-scrollbar-track {
+  background: #494c4f; 
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #282D31;
+  border-radius: 1rem;
+}
+body::-webkit-scrollbar-thumb:active{
+
+  background-color: #181a1cc2;
+}
+.theme-dark .contact{
+  background: #222831;
+}
+.contact .content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.formBx{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.formBx ul{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+}
+.formBx a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: black;
+  margin: 0.3rem;
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fa-whatsapp:hover{
+  color: green;
+}
+.contact .contactInfo{
+  color: var(--color-text);
+}
+.contact .fa{
+  color: var(--color-text);
+}
+.comunicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textcontext{
+    color: var(--color-text);
+}
+.theme-dark .aula{
+    background: linear-gradient(to bottom, #151618,#222831);
+}
+h3.textcontext{
+    
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--color-titulo);
+}
+p.textcontext {
+    padding-bottom: 2rem;
+}
+.icon {
+  width: 250px;
+  border-radius: 10px 10px 0rem 0rem;
+  height: 250px;
+}
+.holanda{
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  background-color: transparent;
+  margin-top: 0;
+  margin-left:  2.2rem;
+  margin-right: 2.2rem;
+}
+.alternative{
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+}
+.w50 {
+  min-width: auto;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.services .content .servicesBx {
+  padding: 40px 20px;
+  background: var(--color-back-secundario);
+  color: var(--color-text);
+  max-width: 340px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 7px 7px 10px 2px var(--shadow);
+  transition: 0.5s;
+  border-radius: 10px;
+  min-width: 270px;
+}
+.toogle{
+  display: none;
+}
+.menu{
+  transform: scale(0);
+  position: absolute;
+}
+.active .menu{
+  transform: scale(1);
+  position: fixed;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-back);
+  transform: 1;
+  z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000;
+  transition: all 0.4s;
+}
+.theme-light #toogledos{
+  filter: invert(0.5);
+}
+#toogledos {
+  position: absolute;
+  top: 40px;
+  margin: 0;
+  right: 100px;
+  background: url(https://image.flaticon.com/icons/png/512/75/75519.png);
+  background-size: cover;
+  filter: invert(1);
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.menu ul{
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+justify-content: center;
+}
+.menu a{
+  color: var(--color-text);
+
+}
+.menu li{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.btn-flotante {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 7.1rem;
+  letter-spacing: 2px;
+  padding: 12px 0px 10px 0px;
+  background-color: #2ab63f;
+  position: fixed;
+  text-decoration: none;
+  bottom: 40px;
+  right: 40px;
+  transition: all 500ms ease 0ms;
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+.btn-flotante:hover {
+  background-color: #462e87;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
+  transform: translateY(-7px);
+  display: flex;
+  border-radius: 1.8rem;
+}
+.btn-flotante img{
+  max-height: 33px;
+}
+@media (max-width: 1200px) {
+    .alternative{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    #video{
+      margin: auto;
+      margin-top: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .cambiador{
+      padding-left: 0rem;
+    }
+    header ul{
+        display: none;
+    }
+    .toogle{
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url(https://image.flaticon.com/icons/png/512/51/51078.png);
+      background-size: contain;
+      filter: invert(1);
+      cursor: pointer;
+  }
+  .theme-light .sticky .toogle{
+    filter: invert(0);
+  }
+  .theme-dark .sticky .toogle{
+    filter: invert(1);
+  }
+  .menu{
+    position: fixed;
+  }
+}
+
+@media (max-width: 540px) {
+  .about{
+    background-color: red;
+  }
+  .banner h2 {
+    font-size: 1.6em;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 3.5rem;
+}
+  .banner h2 span {
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+.work .content {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1.5fr;
+  }
+  .contact .content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.formBx {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5rem;
+}
+.formBx ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  }
+  header {
+    padding: 15px 40px;
+  }
+  header.sticky {
+    background: var(--color-back);
+    color: var(--color-text);
+    padding: 15px 40px;
+    opacity: 0.9;
+    height: 75px;
+}
+section {
+  padding: 40px;
+}
+header img{
+  max-height: 54%;
+  width: 100px;
+}
+.cambiador{
+  transform: scale(0.8);
+}
+.logo img{
+  max-height: 54%;
+  width: 110px !important;
+}
+}
+@media (max-width: 420px) {
+  .banner h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+}
+	</style>
     <title>React App</title>
 </head>
 <body id="principal">
@@ -135,16 +833,16 @@
                 <p>Ofrecemos productos con propósito que son sembrados y cosechados por los mismos pobladores, permitiendo así generar puestos de trabajo.</p>
             </div>
             <div class="content">
-                <div class="servicesBx">
+                <a href="https://frankrolando.olistshops.com/categorias/cafe" target="_blank"><div class="servicesBx">
                     <img src='https://frankrolando.com/wp-content/uploads/sites/107/2020/12/click-cafe-480x480.png' class="icon" alt="imagen"/>
                     <h2>Todo Café</h2>
-                </div>
-                <div class="servicesBx">
+                </div></a>
+                <a href="https://frankrolando.olistshops.com/categorias/cacao" target="_blank"><div class="servicesBx">
                     <img src='https://frankrolando.com/wp-content/uploads/sites/107/2020/12/tienda-virtual-CLICK-2-980x980.png' class="icon" alt="imagen"/>
                     <h2>Todo Cacao</h2>
-                </div>
+                </div></a>
                 <div class="servicesBx alternative" style="padding-top: 8rem; padding-bottom: 8rem;">
-                    <a href="" class="btn holanda">Ver Tienda</a>
+                    <a href="https://frankrolando.olistshops.com/" class="btn holanda">Ver Tienda</a>
                 </div>
             </div>
         </section>
